@@ -1,0 +1,24 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development --devtool eval-cheap-module-source-map --config webpack.config.js",
+    "build-dist": "webpack --mode production --devtool eval-cheap-module-source-map --config webpack.config.js",
+    "build-watch": "webpack ./js/main.js --mode development --watch --devtool eval-cheap-module-source-map",
+    "serve": "webpack-dev-server --mode development --devtool eval-cheap-module-source-map --config webpack.config.js --output-public-path /dist/ --static public .",
+    "start": "npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
